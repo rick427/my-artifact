@@ -7,7 +7,8 @@ export default defineConfig({
     plugins: [react()],
     resolve: {
         alias: {
-            '@richardnjoku/ui-kit': path.resolve(__dirname, '../ui-kit/src')
+            /** Point to /dist on production **/
+            '@richardnjoku/ui-kit': path.resolve(__dirname, '../ui-kit/src') 
         }
     }
 });

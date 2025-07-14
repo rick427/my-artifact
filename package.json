@@ -2,27 +2,49 @@
   "name": "my-artifact",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
+  "description": "A component-driven UI kit for finance apps, built with React and Lerna.",
+  "main": "index.js",
+  "keywords": [
+    "react",
+    "ui-kit",
+    "design-system",
+    "finance",
+    "monorepo",
+    "components",
+    "lerna",
+    "typescript"
+  ],
+  "author": {
+    "name": "Richard Njoku",
+    "email": "rchardnjoku@yahoo.com",
+    "url": "https://github.com/rick427"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rick427/my-artifact"
+  },
+  "bugs": {
+    "url": "https://github.com/rick427/my-artifact/issues"
+  },
   "workspaces": [
     "packages/*"
   ],
-  "description": "",
-  "main": "index.js",
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
-    "dev": "lerna run dev"
+    "dev": "lerna run dev",
+    "reinstall": "rm -rf node_modules package-lock.json && npm install",
+    "lint:packages": "lerna run lint --stream"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "module",
   "devDependencies": {
-    "@types/react": "^19.1.8",
-    "@types/react-dom": "^19.1.6",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.1",
     "lerna": "^8.2.3"
   },
   "dependencies": {
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   }
 }

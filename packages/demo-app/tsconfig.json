@@ -7,9 +7,14 @@
     "esModuleInterop": true,
     "strict": true,
     "skipLibCheck": true,
+    "baseUrl": "src",
     "paths": {
-      "@richardnjoku/ui-kit": ["../ui-kit/src"]  // or ["../ui-kit/dist"] if you're using the build output
+      "@richardnjoku/ui-kit": ["../ui-kit/src"],  // or ["../ui-kit/dist"] if you're using the build output
+      "@components/*": ["components/*"],
+      "@hooks/*": ["hooks/*"],
+      "@utils/*": ["utils/*"]
+      
     }
   },
-  "include": ["src"]
+  "include": ["src", "global.d.ts"]
 }

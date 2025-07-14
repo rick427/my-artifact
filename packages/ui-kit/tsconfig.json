@@ -10,7 +10,11 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "strict": true,
-    "types": ["react", "react-dom"]
+    "baseUrl": ".",
+    "paths": {
+      "@ui-kit/*": ["src/*"]
+    },
+    "types": ["vitest", "react", "react-dom"]
   },
   "include": ["src"]
 }

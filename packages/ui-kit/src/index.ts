@@ -1,1 +1,2 @@
-export * from './atoms/button';
+export * from './components/atoms/button';
+export * from './context';

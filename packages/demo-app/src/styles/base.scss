@@ -1,0 +1,67 @@
+/* ====== CSS Reset ====== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* Set box-sizing globally */
+html {
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Inherit fonts for inputs and buttons */
+body, input, button, textarea, select {
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+/* Remove default list styles */
+ul, ol {
+  list-style: none;
+}
+
+/* Remove anchor default styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Reset heading sizes & weight */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+/* Buttons inherit styling & remove borders */
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* Images behave responsively */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Form elements don’t inherit weirdness */
+input, textarea, select, button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+  appearance: none;
+}
+
+/* Remove user-agent spacing */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}

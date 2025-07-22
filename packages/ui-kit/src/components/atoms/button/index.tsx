@@ -1,7 +1,7 @@
-//packages/ui-kit/button
+// packages/ui-kit/button
 
 import React from 'react';
-
+import clsx from 'clsx';
 import styles from './button.module.scss';
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -11,16 +11,16 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 }
 
 export const Button = (props:ButtonProps) => {
-    const { children, variant = 'primary', className = '', ...rest} = props;
-
-    const combinedClassName = [
-        styles.button,
-        styles[`button--${variant}`],
-        className
-    ].filter(Boolean).join(' ');
-
+    const { children, variant = 'primary', className, ...rest} = props;
     return (
-        <button className={combinedClassName} {...rest}>
+        <button
+            className={clsx(
+                styles.button,
+                styles[`button--${variant}`],
+                className
+            )}
+            {...rest}
+        >
             {children}
         </button>
     );

@@ -1,0 +1,41 @@
+.header{
+    padding: 1.5rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo{
+        font-size: 1.2rem;
+        font-weight: 800;
+        letter-spacing: 0.1ch;
+    }
+
+    span{
+        font-size: 0.85rem;
+        font-weight: 300;
+        letter-spacing: 0.1ch;
+    }
+
+    &__list{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        &__item{
+            font-size: 0.85rem;
+            font-weight: 300;
+            letter-spacing: 0.1ch;
+        }
+
+        &__button{
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.1ch;
+            border-radius: 2rem;
+            color: rgb(13, 56, 175);
+            background-color: rgb(236, 242, 255);
+            cursor: pointer;
+        }
+    }
+}

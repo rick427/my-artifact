@@ -1,14 +1,40 @@
-//packages/ui-kit/group
-
 import React from 'react';
-import styles from "./group.module.scss";
+import clsx from 'clsx';
 
-export interface GroupProps extends React.HTMLAttributes<HTMLDivElement>{
+import styles from './group.module.scss';
 
+export interface GroupProps extends React.HTMLAttributes<HTMLDivElement> {
+    gap?: 'xs' | 'sm' | 'md' | 'lg';
+    align?: 'start' | 'center' | 'end' | 'stretch';
+    justify?: 'start' | 'center' | 'end' | 'space-between' | 'space-around';
+    wrap?: boolean;
 }
 
-export default function Group() {
+export const Group = (props: GroupProps) => {
+    const {
+        children,
+        className,
+        gap = 'md',
+        align = 'center',
+        justify = 'start',
+        wrap = false,
+        ...rest
+    } = props;
+
     return (
-        <div>Group</div>
-    )
-}
+        <div className={clsx(
+            styles.group,
+            styles[`gap-${gap}`],
+            styles[`align-${align}`],
+            styles[`justify-${justify}`],
+            wrap && styles.wrap,
+            className
+        )}
+            {...rest}
+        >
+            {children}
+        </div>
+    );
+};
+
+export default Group;

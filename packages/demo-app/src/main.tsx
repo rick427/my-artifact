@@ -6,6 +6,13 @@ import { UIProvider } from '@richardnjoku/ui-kit';
 import App from './app';
 import "./styles/base.scss";
 
+const defaultTheme = {
+    colors: {},
+    font: {
+        family: ""
+    }
+}
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
         <BrowserRouter>

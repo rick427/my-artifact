@@ -1,0 +1,61 @@
+/* packages/ui-kit/components/layout/grid.module.scss */
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -var(--grid-gutter, 1rem);
+  margin-right: -var(--grid-gutter, 1rem);
+}
+
+.col {
+  padding-left: var(--grid-gutter, 1rem);
+  padding-right: var(--grid-gutter, 1rem);
+  box-sizing: border-box;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+/* Dynamically generated classes (via build step or utility loop if needed) */
+@for $i from 1 through 12 {
+  .col-span-#{$i} {
+    width: calc(100% / 12 * #{$i});
+  }
+
+  .offset-#{$i} {
+    margin-left: calc(100% / 12 * #{$i});
+  }
+}
+
+/* Example media queries using CSS vars (from your theme context) */
+@media (min-width: var(--breakpoint-sm, 640px)) {
+  @for $i from 1 through 12 {
+    .col-sm-#{$i} {
+      width: calc(100% / 12 * #{$i});
+    }
+    .offset-sm-#{$i} {
+      margin-left: calc(100% / 12 * #{$i});
+    }
+  }
+}
+
+@media (min-width: var(--breakpoint-md, 768px)) {
+  @for $i from 1 through 12 {
+    .col-md-#{$i} {
+      width: calc(100% / 12 * #{$i});
+    }
+    .offset-md-#{$i} {
+      margin-left: calc(100% / 12 * #{$i});
+    }
+  }
+}
+
+@media (min-width: var(--breakpoint-lg, 1024px)) {
+  @for $i from 1 through 12 {
+    .col-lg-#{$i} {
+      width: calc(100% / 12 * #{$i});
+    }
+    .offset-lg-#{$i} {
+      margin-left: calc(100% / 12 * #{$i});
+    }
+  }
+}
